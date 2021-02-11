@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Qouted stocks
+{% endblock %}
+
+{% block main %}
+    <p>
+        A share of {{stockName['company']}} ({{stockName['symbol']}}) costs {{stockName['price']}}
+
+    </p>
+    <form action="\buy" method="post">
+        <div class= "form-group">
+            <input id = "stock" autocomplete="off" autofocus class = "form-control" name = "stock" type = "text" value = "{{stockName['symbol']}}">
+        </div>
+        <div class= "form-group">
+            <input autocomplete="off" autofocus class = "form-control" name = "shares" type = "number" min="1" placeholder="Shares">
+        </div>
+        <button class = "btn btn-primary" type = "submit">Buy</button>
+    </form>
+    <br>
+    <form action="/index">
+        <div class="form-group" >
+            <button class = "btn btn-primary" type = "submit">Portfolio</button>
+        </div>
+    </form>
+{% endblock %}

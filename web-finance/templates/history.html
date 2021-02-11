@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title%}
+    history
+{% endblock %}
+
+{% block main%}
+    <table class="table table-striped table-hover">
+        <thead>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Price Per Share</th>
+            <th>TimeStamp</th>
+        </thead>
+
+        <tbody>
+            {% for transaction in history %}
+            <tr>
+                <td>{{transaction["symbol"]}}</td>
+                <td>{{transaction["shares"]}}</td>
+                <td>{{transaction["price"]}}</td>
+                <td>{{transaction["time"]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <form action="/index">
+        <div class="form-group" >
+            <button class = "btn btn-primary" type = "submit">Portfolio</button>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Investment Portfolio
+{% endblock %}
+
+{% block main%}
+    <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+            <th>Symbol</th>
+            <th>Company</th>
+            <th>Shares</th>
+            <th>Max Price Paid /sh</th>
+            <th>Current Price</th>
+            <th>Investment</th>
+            <th>Stocks Value</th>
+        </thead>
+
+        <tbody>
+            {% for holding in holdings %}
+            <tr>
+                <td>{{holding["symbol"]}}</td>
+                <td>{{holding["company"]}}</td>
+                <td>{{holding["shares"]}}</td>
+                <td>{{holding["acqPrice"]}}</td>
+                <td>{{holding["currPrice"]}}</td>
+                <td>{{holding["invested"]}}</td>
+                <td>{{holding["total"]}}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="4"></td>
+                <td>Assests Worth</td>
+                <td colspan="1"></td>
+                <td>{{grand_total}}</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>Cash</td>
+                <td colspan="1"></td>
+                <td>{{cash}}</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>Net Worth</td>
+                <td colspan="1"></td>
+                <td>{{net_worth}}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
