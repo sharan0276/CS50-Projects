@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+TIMER
+{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/tstyle.css">
+{% endblock %}
+
+{% block body %}
+  <div id="content">
+    <h1>COUNTDOWN TIMER</h1>
+    <h2>
+      <form onsubmit="countdown(); return false;">
+        <input type="text" id="time" placeholder="HH:MM:SS" autocomplete="off">
+        <input type="submit" value="Start">
+      </form>
+    </h2>
+    <div id="clock_container">
+      <div>
+        <span class="hours" id="hour"></span>
+        <div class="smalltext">Hours</div>
+      </div>
+      <div>
+        <span class="minutes" id="minute"></span>
+        <div class="smalltext">Minutes</div>
+      </div>
+      <div>
+        <span class="seconds" id="second"></span>
+        <div class="smalltext">Seconds</div>
+      </div>
+    </div>
+
+    <p id="expire"></p>
+
+    <form onsubmit="resetTimer(); return false;">
+      <input type="submit" value="Reset">
+    </form>
+  </div>
+{% endblock %}
+
+
+{% block script %}
+    <script src="/static/tscript.js"></script>
+{% endblock %}

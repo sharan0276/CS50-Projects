@@ -1,0 +1,64 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    background: #0d0d0d;
+}
+
+
+.logo{
+    padding:10px 0;
+    position:relative;
+    margin: 0;
+    cursor: pointer;
+    width: 300px;
+    height: 150px;
+}
+
+.nav-bar{
+    background-color: #262626;
+}
+
+.top{
+    justify-content: center;
+    align-content: center;
+    /*transform: translateY(-50%);*/
+}
+
+.nav-bar ul{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin: 0;
+    padding: 20px 0;
+    background: #fff;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    transform:translate(-30%, -345%);
+
+}
+
+
+.nav-bar ul li
+{
+    list-style: none;
+    text-align: center;
+    display: block;
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
+
+.nav-bar ul li:last-child{
+    border-right: none;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    padding: 0 50px;
+    display: block;
+}
+
+.icon{
+    color: #800080;
+}

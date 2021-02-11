@@ -1,0 +1,91 @@
+body{
+    font-family: 'Trebuchet MS', sans-serif;
+    background: #0d0d0d;
+}
+
+h1{
+  color: #cc80ff;
+  opacity: 0.55;
+  font-weight: bold;
+  font-size: 35px;
+  margin: 40px 0px 20px;
+}
+
+h2{
+  color: #cc80ff;
+  font-weight: 10;
+  font-size: 20px;
+  margin: 10px 0px 20px;
+}
+
+#content {
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  margin-top: 120px;
+  max-width: 100%;
+}
+
+#expire {
+  font-size: 15px;
+  color: #cc80ff;
+  font-weight: 10;
+}
+
+input[type=text] {
+  width: 200px;
+  padding: 12px 20px;
+  background: #f2f2f2;
+  opacity: 0.9;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #8c8c8c;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+input[type=submit] {
+  width: 110px;
+  background-color: #333333;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  opacity: 0.7;
+}
+
+
+#clock_container{
+    font-family: 'Trebuchet MS', sans-serif;
+    color: rgba(0,0,0,0.75);
+    display: inline-block;
+    text-align: center;
+}
+
+#clock_container > div{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    background: #8a25b1;
+    display: inline-block;
+    font-size: 30px;
+}
+#clock_container div > span{
+    padding: 15px;
+    border-radius: 5px;
+    background: #cc80ff;
+    opacity: 0.8;
+    display: inline-block;
+}
+
+smalltext{
+    padding-top: 5px;
+    font-size: 10px;
+    font-weight: 30;
+}

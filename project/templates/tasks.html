@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+TODO's
+{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/todostyle.css">
+    <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block body %}
+
+    <h1>TASKS</h1>
+    <ul class= "post-outer">
+        {% for todo in todos %}
+            <li class ="post">
+                <a href="#">
+                    <p>{{ todo }}</p>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <form id = "form" action="/todo" method="POST">
+        <div class="inputBox">
+            <input class= "field" name = "task"  type="text" size = "60" placeholder="------ADD A NEW TASK------" autocomplete="off" required>
+        </div>
+
+        <input type="submit" class="submit-btn" value="+">
+    </form>
+{% endblock %}
+
+
