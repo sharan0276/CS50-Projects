@@ -14,3 +14,5 @@ CRUX has an arithmetic calculator that performs all basic arithmetic operations.
 
 Using countdown timer:
 Enter the duration you want to count in the specified format and click the 'Start' button to start the timer. You can reset the timer by clicking on the 'Reset' button.
+
+Project Demo : https://youtu.be/HXHHd2MUDqM
