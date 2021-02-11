@@ -1,0 +1,159 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+    /* background: linear-gradient(rgba(255,255,255, 0.5), rgba(255,255,255,0.5)), url(images/flag.jpg);*/
+    background-color: #444456;
+    transition: all 0.5s ease;   /*to set a transition time for smooth change in background color.*/
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #ffaa33;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo{
+    color: white;
+    font-size: 20px;
+}
+
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+
+.nav-links li{
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 17;
+    list-style: none;
+}
+
+.color{
+    color: #ffffff;
+}
+
+
+/* the burger symbol*/
+
+.burger{
+    display : none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+
+@media screen and (max-width:769px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #ffaa33;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 17;
+    }
+
+    .burger{
+        display: block;
+    }
+
+}
+
+/* Translate the contents present along the overflow section*/
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+
+/*Animation for the notifications to follow*/
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.container{
+    position: relative;
+    text-align: center;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img{
+    width: 100%;
+    height: 90vh;
+    margin-bottom: 70px;
+    margin-top: 50px;
+}
+
+.centered{
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(+440%, -50%);
+    z-index: 300;
+}
+
+.pictext{
+    font-size: 3vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+.page2{
+    height:50vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.page2 p{
+    text-align: center;
+    justify-content: center;
+}
+
+.text{
+    color: #485F77;
+    font-family: "DM-Sans", sans-serif;
+    text-align: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 1vw;
+}
+
+.bg-active{
+    background-color: white;
+}

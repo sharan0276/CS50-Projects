@@ -1,0 +1,134 @@
+/*Reset initial settings*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #ffaa33;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 30px;
+}
+
+.logo{
+    color: white;
+    font-size: 20px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.nav-links li{
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 17;
+    list-style: none;
+}
+
+.color{
+    color: #ffffff;
+}
+
+/* the burger symbol*/
+
+.burger{
+    display : none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+
+@media screen and (max-width:769px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #ffaa33;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 17;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .gallery{
+        width:350px;
+    }
+}
+
+/* Translate the contents present along the overflow section*/
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+
+/*Animation for the notifications to follow*/
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    margin: auto;
+    overflow: auto;
+    /*flex-direction: column;*/
+    justify-content: space-around;
+}
+
+.gallery{
+
+    /*max-width: 1200px;*/
+    margin: 1vw;
+    border: 1px solid #ccc;
+    float: left;
+    width: 300px;
+    justify-content: space-around;
+}
+
+.gallery img{
+
+    width: 100%;
+    height: auto;
+}
+
+
+.caption{
+
+    padding: 15px;
+    text-align: center;
+}
